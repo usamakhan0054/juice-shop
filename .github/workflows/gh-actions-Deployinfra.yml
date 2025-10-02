@@ -30,7 +30,7 @@ jobs:
         inlineScript: |
           az group create --name ${{ secrets.DEVRESOURCEGROUP }} --location ${{ secrets.LOCATION }} --tags LabInstance=${{ secrets.LABINSTANCEID }}
 
-          az group create --name ${{ secrets.PRODRESOURCEGROUP }} --location 'east us2' --tags LabInstance=${{ secrets.LABINSTANCEID }}
+          az group create --name ${{ secrets.PRODRESOURCEGROUP }} --location ${{ secrets.LOCATION }} --tags LabInstance=${{ secrets.LABINSTANCEID }}
         azcliversion: latest
 
     - uses: azure/cli@v1.0.0
